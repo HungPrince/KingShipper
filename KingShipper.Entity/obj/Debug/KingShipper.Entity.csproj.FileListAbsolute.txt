@@ -1,0 +1,10 @@
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll.config
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.pdb
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.dll
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.xml
+E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.csprojResolveAssemblyReference.cache
+E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.dll
+E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.pdb

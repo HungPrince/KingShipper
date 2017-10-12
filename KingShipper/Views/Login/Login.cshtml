@@ -1,0 +1,41 @@
+﻿@model KingShipper.Models.Account
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<style type="text/css">
+    #noty-invalidup li {
+        list-style-type: none;
+    }
+
+    #noty-invalidup ul {
+        padding-left: 0px;
+    }
+</style>
+<div class="login">
+    @*<h2 style="text-align:center">Data Management Console</h2>*@
+    <div class="content">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <form class="login-form">
+                <h3 class="form-title font-green">Login</h3>
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @maxlength = "100", @placeholder = "Username" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(m => m.Password, htmlAttributes: new { @class = "form-control", @maxlength = "150", @placeholder = "Password" })
+                </div>
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger errorlogin padding-left-12", @id = "noty-invalidup" })
+                </div>
+                <div class="form-actions" align="center">
+                    <button type="submit" class="btn btn-info pull-right">Login</button>
+                </div>
+            </form>
+        }
+    </div>
+</div>

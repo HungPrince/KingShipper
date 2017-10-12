@@ -1,0 +1,14 @@
+﻿@Html.Partial("~/Views/Shared/_Header.cshtml")
+@Html.Partial("~/Views/Shared/_Nav.cshtml")
+@Html.Partial("~/Views/Shared/_Logo.cshtml");
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div>
+    @RenderBody()
+    <hr />
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+
+@Html.Partial("~/Views/Shared/_Fotter.cshtml")

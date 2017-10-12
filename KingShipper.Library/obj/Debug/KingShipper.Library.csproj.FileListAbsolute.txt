@@ -1,0 +1,5 @@
+E:\Study\Project\KingShipper\KingShipper.Library\bin\Debug\KingShipper.Library.dll
+E:\Study\Project\KingShipper\KingShipper.Library\bin\Debug\KingShipper.Library.pdb
+E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.csprojResolveAssemblyReference.cache
+E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.dll
+E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.pdb

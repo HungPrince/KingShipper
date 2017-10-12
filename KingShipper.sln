@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.WebUI", "KingShipper\KingShipper.WebUI.csproj", "{573CE9C0-7E86-4C80-9EE5-63D209BACB91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.WebApi", "KingShipper.WebApi\KingShipper.WebApi.csproj", "{AFFCE693-41BA-4B1E-A2BB-3041F7963924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.Constant", "KingShipper.Constant\KingShipper.Constant.csproj", "{FA97E9BF-A63F-4429-B287-26552573E952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.Service", "KingShipper.Service\KingShipper.Service.csproj", "{9EFDE401-9A7A-4256-B9AE-9979F7E1B651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.Data", "KingShipper.Data\KingShipper.Data.csproj", "{1731F5C6-7BBC-434D-93FA-7FA51796A6D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.Entity", "KingShipper.Entity\KingShipper.Entity.csproj", "{BB085EAB-1CFA-41FB-907B-117F695059A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingShipper.Library", "KingShipper.Library\KingShipper.Library.csproj", "{17925FC1-59E2-419D-A316-F709C884D7E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{573CE9C0-7E86-4C80-9EE5-63D209BACB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573CE9C0-7E86-4C80-9EE5-63D209BACB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573CE9C0-7E86-4C80-9EE5-63D209BACB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573CE9C0-7E86-4C80-9EE5-63D209BACB91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFCE693-41BA-4B1E-A2BB-3041F7963924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFCE693-41BA-4B1E-A2BB-3041F7963924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFCE693-41BA-4B1E-A2BB-3041F7963924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFCE693-41BA-4B1E-A2BB-3041F7963924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA97E9BF-A63F-4429-B287-26552573E952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA97E9BF-A63F-4429-B287-26552573E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA97E9BF-A63F-4429-B287-26552573E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA97E9BF-A63F-4429-B287-26552573E952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFDE401-9A7A-4256-B9AE-9979F7E1B651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFDE401-9A7A-4256-B9AE-9979F7E1B651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFDE401-9A7A-4256-B9AE-9979F7E1B651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFDE401-9A7A-4256-B9AE-9979F7E1B651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1731F5C6-7BBC-434D-93FA-7FA51796A6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1731F5C6-7BBC-434D-93FA-7FA51796A6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1731F5C6-7BBC-434D-93FA-7FA51796A6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1731F5C6-7BBC-434D-93FA-7FA51796A6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB085EAB-1CFA-41FB-907B-117F695059A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB085EAB-1CFA-41FB-907B-117F695059A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB085EAB-1CFA-41FB-907B-117F695059A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB085EAB-1CFA-41FB-907B-117F695059A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17925FC1-59E2-419D-A316-F709C884D7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17925FC1-59E2-419D-A316-F709C884D7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17925FC1-59E2-419D-A316-F709C884D7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17925FC1-59E2-419D-A316-F709C884D7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="~/Areas/Admin/css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="~/Areas/Admin/css/font-awesome.css" rel="stylesheet">
+<!-- jQuery -->
+<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+<!-- lined-icons -->
+<link rel="stylesheet" href="~/Areas/Admin/css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<div class="error_page">
+    <!--/login-top-->
+
+    @using (Html.BeginForm("Register", "Account"))
+    {
+        <div class="error-top">
+            <h2 class="inner-tittle page">Management</h2>
+            <div class="login">
+                <h3 class="inner-tittle t-inner">Register</h3>
+                <form>
+                    <input type="text" value="FullName" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'FullName';}">
+                    <input type="text" value="UserName" name="UserName" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'UserName';}">
+                    <input type="text" class="text" name="Email" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+                    <input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                    <input type="text" value="Address" name="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}">
+                    <div class="input-append date" name="Birthday" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <input class="span2" size="16" type="text" value="12-02-2012">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                    </div>     
+                    <div class="sign-up">
+                        <input type="reset" value="Reset">
+                        <input type="submit" onclick="myFunction()" value="Register">
+
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="new">
+                        <p><label class="checkbox11"><input type="checkbox" name="checkbox"><i> </i>I agree with the terms</label></p>
+                        @*<p class="sign">Already register ?<span> @Html.ActionLink("Login","Login","Account")</span></p>*@
+                        <p class="sign">Already register ? <a href="@Url.Action("Login","Account")">Login</a></p>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    }
+</div>
+<script src="~/Areas/Admin/js/jquery.nicescroll.js"></script>
+<script src="~/Areas/Admin/js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
