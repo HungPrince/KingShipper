@@ -21,6 +21,7 @@
     <!--/login-top-->
     @using (Html.BeginForm("Login", "Account"))
     {
+        @Html.AntiForgeryToken()
         <div class="error-top">
             <h2 class="inner-tittle page">Management</h2>
             <div class="login">

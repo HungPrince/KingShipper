@@ -1,5 +1,6 @@
 ﻿using KingShipper.Library;
 using KingShipper.Models;
+using Microsoft.Security.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,11 @@ namespace KingShipper.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public async Task<ActionResult> Login(Account model)
         {
+            var username = Sanitizer.GetSafeHtmlFragment(model.UserName);
             string url = Config.WebApiUrl + "/api/User/Login";
 
             client.BaseAddress = new Uri(url);
