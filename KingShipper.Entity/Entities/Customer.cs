@@ -9,7 +9,12 @@ namespace KingShipper.Entity
     [Table("Customer")]
     public partial class Customer
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customer()
+        {
+            Orders = new HashSet<Order>();
+        }
+
         public int Id { get; set; }
 
         [StringLength(250)]
@@ -35,5 +40,8 @@ namespace KingShipper.Entity
         public DateTime? Created { get; set; }
 
         public DateTime? Updated { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

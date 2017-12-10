@@ -8,6 +8,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using KingShipper.Entity;
+using KingShipper.Service.Services;
 
 namespace KingShipper.Areas.Admin.Controllers
 {
@@ -45,6 +47,8 @@ namespace KingShipper.Areas.Admin.Controllers
                 if (responseData.Data != null)
                 {
                     Session["User"] = responseData.Data;
+                    Session["Role"] = responseData.Data.RoleId.ToString();
+                    Session["Permission"] = GetListPermission(responseData.Data.Id);
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -78,6 +82,25 @@ namespace KingShipper.Areas.Admin.Controllers
             }
             ModelState.AddModelError("", responseData.Message);
             return View(model);
+        }
+
+        private List<string> GetListPermission(int userId)
+        {
+            var permissionName = "";
+            var lstUPermission = UserPermissionService.GetAll(userId);
+            var lstPermission = new List<string>();
+            if (lstUPermission.Count > 0)
+            {
+                for (int i = 0; i < lstUPermission.Count; i++)
+                {
+                    permissionName = PermissionService.GetNameById(lstUPermission[i].PermissionID);
+                    if (permissionName != "" && lstUPermission[i].Status == 1)
+                    {
+                        lstPermission.Add(permissionName);
+                    }
+                }
+            }
+            return lstPermission;
         }
 
     }

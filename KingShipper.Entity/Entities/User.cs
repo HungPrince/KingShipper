@@ -9,14 +9,13 @@ namespace KingShipper.Entity
     [Table("User")]
     public partial class User
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         //public User()
         //{
         //    Orders = new HashSet<Order>();
-        //    Orders1 = new HashSet<Order>();
+        //    UserBusinesses = new HashSet<UserBusiness>();
         //}
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(250)]
@@ -39,6 +38,9 @@ namespace KingShipper.Entity
 
         public short RoleID { get; set; }
 
+        [StringLength(250)]
+        public string Avartar { get; set; }
+
         public bool? Status { get; set; }
 
         public DateTime? Created { get; set; }
@@ -48,9 +50,13 @@ namespace KingShipper.Entity
         //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         //public virtual ICollection<Order> Orders { get; set; }
 
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //public virtual ICollection<Order> Orders1 { get; set; }
-
         //public virtual Role Role { get; set; }
+
+        //public virtual Banner Banner { get; set; }
+
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<UserBusiness> UserBusinesses { get; set; }
+
+        //public virtual UserPermission UserPermission { get; set; }
     }
 }

@@ -52,6 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repositories\BusinessRepository.cs" />
+    <Compile Include="Repositories\PermissionRepository.cs" />
+    <Compile Include="Repositories\UserBusinessRepository.cs" />
+    <Compile Include="Repositories\UserPermissionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

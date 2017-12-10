@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace KingShipper.WebApi.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
         public ActionResult Index()
         {

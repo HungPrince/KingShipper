@@ -8,3 +8,13 @@ E:\Study\Project\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlSer
 E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.csprojResolveAssemblyReference.cache
 E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.dll
 E:\Study\Project\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.pdb
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll.config
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.pdb
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.dll
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.xml
+E:\Study\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.csprojResolveAssemblyReference.cache
+E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.dll
+E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.pdb

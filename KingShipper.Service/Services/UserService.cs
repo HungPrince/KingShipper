@@ -18,15 +18,24 @@ namespace KingShipper.Service.Services
             }
         }
 
-        public static bool CheckUser(User user)
+        public static User GetUserById(int userId)
         {
             using (var uow = new UnitOfWork())
             {
-                if (uow.UserRepository.Find(u => u.UserName == user.UserName && u.Password == user.Password) != null)
+                return uow.UserRepository.Find(u => u.Id == userId);
+            }
+        }
+
+        public static User CheckUser(User user)
+        {
+            using (var uow = new UnitOfWork())
+            {
+                var usr = uow.UserRepository.Find(u => u.UserName == user.UserName && u.Password == user.Password);
+                if (usr != null)
                 {
-                    return true;
+                    return usr;
                 }
-                return false;
+                return null;
             }
         }
 
@@ -36,7 +45,7 @@ namespace KingShipper.Service.Services
             {
                 if (user != null)
                 {
-                  return  uow.UserRepository.Add(user);
+                    return uow.UserRepository.Add(user);
                 }
                 return null;
             }

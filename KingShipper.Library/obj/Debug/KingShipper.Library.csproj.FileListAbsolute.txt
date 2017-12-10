@@ -3,3 +3,8 @@ E:\Study\Project\KingShipper\KingShipper.Library\bin\Debug\KingShipper.Library.p
 E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.csprojResolveAssemblyReference.cache
 E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.dll
 E:\Study\Project\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.pdb
+E:\Study\KingShipper\KingShipper.Library\bin\Debug\KingShipper.Library.dll
+E:\Study\KingShipper\KingShipper.Library\bin\Debug\KingShipper.Library.pdb
+E:\Study\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.csprojResolveAssemblyReference.cache
+E:\Study\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.dll
+E:\Study\KingShipper\KingShipper.Library\obj\Debug\KingShipper.Library.pdb

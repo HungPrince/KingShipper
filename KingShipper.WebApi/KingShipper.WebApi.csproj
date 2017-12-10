@@ -192,14 +192,19 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BusinessController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\UserBusinessController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserPermissionController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\UserPermissionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,9 +258,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Business\" />
+    <Folder Include="Views\Permission\" />
+    <Folder Include="Views\UserBusiness\" />
+    <Folder Include="Views\UserPermission\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -288,6 +298,10 @@
     <ProjectReference Include="..\KingShipper.Service\KingShipper.Service.csproj">
       <Project>{9efde401-9a7a-4256-b9ae-9979f7e1b651}</Project>
       <Name>KingShipper.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KingShipper\KingShipper.WebUI.csproj">
+      <Project>{573CE9C0-7E86-4C80-9EE5-63D209BACB91}</Project>
+      <Name>KingShipper.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

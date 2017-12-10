@@ -9,7 +9,6 @@ namespace KingShipper.Entity
     [Table("Product")]
     public partial class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(250)]
@@ -27,5 +26,7 @@ namespace KingShipper.Entity
         public DateTime? Updated { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public virtual ProductDigital ProductDigital { get; set; }
     }
 }

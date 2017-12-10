@@ -1,0 +1,65 @@
+﻿@model KingShipper.Models.ResponseModel<KingShipper.Entity.Permission>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="graph-visual tables-main">
+    <h2 class="inner-tittle">Action Table</h2>
+    <div class="graph">
+        <div class="tables">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            <a href="#" id="updateBusiness">Cập nhật</a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>Business</th>
+                        <th>Tên</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{   var i = 1;}
+                    @if (Model.DataList != null && Model.DataList.Count > 0)
+                    {
+                        foreach (var item in Model.DataList)
+                        {
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@item.BusinessID</td>
+                                <td>@item.Name</td>
+                                <td>@item.Description</td>
+                            </tr>
+                            i++;
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var url = "http://localhost:64955/Admin/Permission/GetAll"
+        $("#updateBusiness").on('click', function () {
+            debugger
+            $.ajax({
+                url: url,
+                method: "GET",
+                success: function () {
+                    alert("update successfully !");
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        });
+    });
+</script>

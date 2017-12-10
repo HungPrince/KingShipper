@@ -9,7 +9,12 @@ namespace KingShipper.Entity
     [Table("Digital")]
     public partial class Digital
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Digital()
+        {
+            ProductDigitals = new HashSet<ProductDigital>();
+        }
+
         public int Id { get; set; }
 
         public double? Height { get; set; }
@@ -24,5 +29,8 @@ namespace KingShipper.Entity
         public int? MaterialID { get; set; }
 
         public virtual Material Material { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductDigital> ProductDigitals { get; set; }
     }
 }

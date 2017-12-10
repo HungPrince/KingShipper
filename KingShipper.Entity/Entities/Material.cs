@@ -15,7 +15,6 @@ namespace KingShipper.Entity
             Digitals = new HashSet<Digital>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(10)]

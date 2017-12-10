@@ -15,7 +15,6 @@ namespace KingShipper.Entity
             Users = new HashSet<User>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public short Id { get; set; }
 
         [StringLength(10)]

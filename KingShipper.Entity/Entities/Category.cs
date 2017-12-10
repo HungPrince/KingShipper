@@ -1,4 +1,5 @@
-namespace KingShipper.Entity { 
+namespace KingShipper.Entity
+{
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -14,7 +15,6 @@ namespace KingShipper.Entity {
             Products = new HashSet<Product>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(10)]

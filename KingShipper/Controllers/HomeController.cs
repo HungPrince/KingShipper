@@ -14,7 +14,7 @@ namespace KingShipper.Controllers
             {
                 return View();
             }
-            return RedirectToAction("Login", "Login");
+            return Redirect("http://localhost:64955/Admin/Account/Login");
         }
 
         public ActionResult About()

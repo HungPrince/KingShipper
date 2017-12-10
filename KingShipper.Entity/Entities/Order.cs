@@ -15,7 +15,6 @@ namespace KingShipper.Entity
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         public int? EmployeeID { get; set; }
@@ -24,9 +23,9 @@ namespace KingShipper.Entity
 
         public DateTime? Created { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public virtual User User1 { get; set; }
+        public virtual User User { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

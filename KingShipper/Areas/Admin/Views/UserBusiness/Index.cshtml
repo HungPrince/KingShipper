@@ -1,0 +1,72 @@
+﻿@model KingShipper.Models.ResponseModel<KingShipper.Entity.UserBusiness>
+
+@{
+    ViewBag.Title = "User Business";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="graph-visual tables-main">
+    <h2 class="inner-tittle">Business Table</h2>
+    <div class="graph">
+        <div class="tables">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            <a href="#" id="updateUserBusiness">User Business</a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{   var i = 1; var check = "";}
+                    @if (Model.DataList != null && Model.DataList.Count > 0)
+                    {
+                        foreach (var item in Model.DataList)
+                        {
+                            check = "";
+                            if (item.Status == 1)
+                            {
+                                check = "checked";
+                            }
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@item.BusinessID</td>
+                                <td><input name="Status" type="checkbox" @check value="@item.BusinessID" /></td>
+
+                                <td><a href="@Url.Action("Index", "UserPermission", new {businessId = @item.BusinessID })">Detail</a></td>
+
+                            </tr>
+                            i++;
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var url = "http://localhost:64955/Admin/UserBusiness/Update"
+        $('input[name="Status"]').on('change', function () {
+            var business = $(this).val();
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: { businessId: business },
+                success: function (result) {
+                    alert(result.status);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        });
+    });
+</script>

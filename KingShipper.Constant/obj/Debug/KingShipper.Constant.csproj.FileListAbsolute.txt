@@ -3,3 +3,8 @@ E:\Study\Project\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant
 E:\Study\Project\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.csprojResolveAssemblyReference.cache
 E:\Study\Project\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.dll
 E:\Study\Project\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.pdb
+E:\Study\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant.dll
+E:\Study\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant.pdb
+E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.csprojResolveAssemblyReference.cache
+E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.dll
+E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.pdb
