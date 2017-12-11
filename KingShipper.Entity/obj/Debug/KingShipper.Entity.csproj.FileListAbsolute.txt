@@ -18,3 +18,13 @@ E:\Study\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.xml
 E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.csprojResolveAssemblyReference.cache
 E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.dll
 E:\Study\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.pdb
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll.config
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\KingShipper.Entity.pdb
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.xml
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.csproj.CoreCompileInputs.cache
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Entity\obj\Debug\KingShipper.Entity.pdb

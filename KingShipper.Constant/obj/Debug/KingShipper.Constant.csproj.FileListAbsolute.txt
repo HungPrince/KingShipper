@@ -8,3 +8,8 @@ E:\Study\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant.pdb
 E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.csprojResolveAssemblyReference.cache
 E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.dll
 E:\Study\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.pdb
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Constant\bin\Debug\KingShipper.Constant.pdb
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.csproj.CoreCompileInputs.cache
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.dll
+C:\Users\HungPrince\Desktop\Thi\CN_Web_NC\KingShipper\KingShipper.Constant\obj\Debug\KingShipper.Constant.pdb

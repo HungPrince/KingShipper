@@ -17,8 +17,8 @@ namespace KingShipper.WebApi.Controllers
             var response = new ResponseModel<User>();
             try
             {
-                //AddUserBusiness();
-                //AddUserPermission();
+                AddUserBusiness();
+                AddUserPermission();
                 var userList = UserService.GetAll();
                 response.DataList = userList;
                 response.Status = ResponseStatus.Success.ToString();
@@ -68,6 +68,7 @@ namespace KingShipper.WebApi.Controllers
                 {
                     response.Data = user;
                     response.Status = ResponseStatus.Success.ToString();
+
                 }
                 else
                 {
@@ -88,11 +89,22 @@ namespace KingShipper.WebApi.Controllers
         public ResponseModel<User> Register(User user)
         {
             var response = new ResponseModel<User>();
+            UserPermission userPermission;
+            var listUser = UserService.GetAll();
             try
             {
                 user.Password = Utility.ToSHA512(user.Password);
-                if (UserService.Add(user) != null)
+                var usr = UserService.Add(user);
+                if (usr != null)
                 {
+                    var listPermission = PermissionService.GetAll();
+                    userPermission = new UserPermission();
+                    userPermission.UserID = usr.Id;
+                    for (int j = 0; j < listPermission.Count; j++)
+                    {
+                        userPermission.PermissionID = listPermission[j].PermissionID;
+                        UserPermissionService.Add(userPermission);
+                    }
                     response.Data = user;
                     response.Status = ResponseStatus.Success.ToString();
                 }
@@ -128,6 +140,8 @@ namespace KingShipper.WebApi.Controllers
                         userBusiness.UserID = listUser[i].Id;
                         for (int j = 0; j < listBusiness.Count; j++)
                         {
+                            if (UserBusinessService.GetUserBusinessById(listUser[i].Id, listBusiness[i].BusinessID) != null)
+                                continue;
                             userBusiness.BusinessID = listBusiness[j].BusinessID;
                             UserBusinessService.Add(userBusiness);
                         }
@@ -158,6 +172,8 @@ namespace KingShipper.WebApi.Controllers
                         for (int j = 0; j < listPermission.Count; j++)
                         {
                             userPermission.PermissionID = listPermission[j].PermissionID;
+                            if (UserPermissionService.GetUserPermissionById(listUser[i].Id, listPermission[j].PermissionID) != null)
+                                continue;
                             UserPermissionService.Add(userPermission);
                         }
                     }

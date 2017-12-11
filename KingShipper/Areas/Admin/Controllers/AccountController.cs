@@ -89,7 +89,7 @@ namespace KingShipper.Areas.Admin.Controllers
             var permissionName = "";
             var lstUPermission = UserPermissionService.GetAll(userId);
             var lstPermission = new List<string>();
-            if (lstUPermission.Count > 0)
+            if (lstUPermission != null)
             {
                 for (int i = 0; i < lstUPermission.Count; i++)
                 {
