@@ -31,10 +31,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @{   var i = 1;}
+                    @{   var i = 1; var roleName = "";}
                     @foreach (var item in Model.DataList)
                     {
 
+                        if(item.RoleID == 1)
+                        {
+                            roleName = "Admin";
+                        }else if(item.RoleID == 2)
+                        {
+                            roleName = "Employee";
+                        }
+                        else
+                        {
+                            roleName = "Customer";
+                        }
                         <tr>
                             <th scope="row">@i</th>
                             <td>@item.Name</td>
@@ -42,14 +53,14 @@
                             <td>@item.Email</td>
                             <td>@item.Address</td>
                             <td>@item.Birthday</td>
-                            <td>@item.RoleID</td>
+                            <td>@roleName</td>
                             <td>@item.Status</td>
                             <td>@item.Created</td>
                             <td>@item.Updated</td>
                             <td>
                                 <a href="@Url.Action("Delete", @item.Id)">Delete | </a>
                                 <a href="@Url.Action("Update", @item.Id)">Update | </a>
-                                <a href="@Url.Action("Index", "UserBusiness", new { userId = item.Id })">Role</a>
+                                <a href="@Url.Action("Index", "UserBusiness", new { userId = item.Id })">Business</a>
                                 <a href="@Url.Action("Index", "UserPermission", new { userId = item.Id })">Permission</a>
                             </td>
                         </tr>

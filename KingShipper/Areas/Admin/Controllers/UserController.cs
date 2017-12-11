@@ -46,8 +46,9 @@ namespace KingShipper.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Add(User model)
+        public async Task<ActionResult> Add(User model, FormCollection form)
         {
+            model.RoleID = Int16.Parse(form["role"]);
             string url = Config.WebApiUrl + "/api/User/Add";
             client.BaseAddress = new Uri(url);
             HttpResponseMessage responseMessage = await client.PostAsJsonAsync(url, model);
@@ -58,6 +59,18 @@ namespace KingShipper.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Update()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Delete()
+        {
+            return View();
         }
     }
 }

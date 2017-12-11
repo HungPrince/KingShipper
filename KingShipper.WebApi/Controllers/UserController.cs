@@ -61,14 +61,42 @@ namespace KingShipper.WebApi.Controllers
         public ResponseModel<User> Add(User user)
         {
             var response = new ResponseModel<User>();
+            UserPermission userPermission;
+            var listUser = UserService.GetAll();
             try
             {
                 user.Password = Utility.ToSHA512(user.Password);
-                if (UserService.Add(user) != null)
+                var usr = UserService.Add(user);
+                if (usr != null)
                 {
+                    var listPermission = PermissionService.GetAll();
+                   
+                    for (int j = 0; j < listPermission.Count; j++)
+                    {
+                        userPermission = new UserPermission();
+                        userPermission.UserID = usr.Id;
+                        userPermission.PermissionID = listPermission[j].PermissionID;
+                        if (user.RoleID == 1)
+                        {
+                            userPermission.Status = 1;
+                        }
+                        else if (user.RoleID == 2)
+                        {
+                            var actionName = PermissionService.GetNameById(listPermission[j].PermissionID);
+                            actionName = actionName.Substring(actionName.Length - 5);
+                            if (actionName.Equals("Index"))
+                            {
+                                userPermission.Status = 1;
+                            }
+                        }
+                        else
+                        {
+                            userPermission.Status = 0;
+                        }
+                        UserPermissionService.Add(userPermission);
+                    }
                     response.Data = user;
                     response.Status = ResponseStatus.Success.ToString();
-
                 }
                 else
                 {
@@ -140,7 +168,7 @@ namespace KingShipper.WebApi.Controllers
                         userBusiness.UserID = listUser[i].Id;
                         for (int j = 0; j < listBusiness.Count; j++)
                         {
-                            if (UserBusinessService.GetUserBusinessById(listUser[i].Id, listBusiness[i].BusinessID) != null)
+                            if (UserBusinessService.GetUserBusinessById(listUser[i].Id, listBusiness[j].BusinessID) != null)
                                 continue;
                             userBusiness.BusinessID = listBusiness[j].BusinessID;
                             UserBusinessService.Add(userBusiness);

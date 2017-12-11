@@ -13,6 +13,7 @@ namespace KingShipper.Data
         private PermissionRepository _PermissionRepository;
         private UserBusinessRepository _UserBusinessRepository;
         private UserPermissionRepository _UserPermissionRepository;
+        private CategoryRepository _CategoryRepository;
 
         public UserRepository UserRepository
         {
@@ -37,6 +38,11 @@ namespace KingShipper.Data
         public UserPermissionRepository UserPermissionRepository
         {
             get { return _UserPermissionRepository ?? (_UserPermissionRepository = new UserPermissionRepository(_context)); }
+        }
+
+        public CategoryRepository CategoryRepository
+        {
+            get { return _CategoryRepository ?? (_CategoryRepository = new CategoryRepository(_context)); }
         }
 
 

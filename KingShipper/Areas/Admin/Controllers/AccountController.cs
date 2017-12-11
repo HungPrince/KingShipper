@@ -47,6 +47,7 @@ namespace KingShipper.Areas.Admin.Controllers
                 if (responseData.Data != null)
                 {
                     Session["User"] = responseData.Data;
+                    Session["UserName"] = responseData.Data.UserName;
                     Session["Role"] = responseData.Data.RoleId.ToString();
                     Session["Permission"] = GetListPermission(responseData.Data.Id);
                     return RedirectToAction("Index", "Home");

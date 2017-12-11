@@ -194,6 +194,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\BusinessController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\PermissionController.cs" />
     <Compile Include="Controllers\UserBusinessController.cs" />
     <Compile Include="Controllers\UserController.cs" />
