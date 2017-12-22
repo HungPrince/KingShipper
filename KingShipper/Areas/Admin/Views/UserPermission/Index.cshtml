@@ -6,9 +6,11 @@
 }
 
 <div class="graph-visual tables-main">
-    <h2 class="inner-tittle">User - Permission</h2>
-    <div>
-        <a href="@Url.Action("Index", "User")">Trở về</a>
+    <div style="margin-left:3%">
+        <h2 class="inner-tittle">User - Permission</h2>
+        <div>
+            <a href="@Url.Action("Index", "User")">Trở về</a>
+        </div>
     </div>
 
     <div class="graph">
@@ -62,7 +64,10 @@
                 method: "POST",
                 data: { permissionId: permissionId },
                 success: function (result) {
-                    alert(result.status);
+                    console.log(result);
+                    if (result.status === "true") {
+                        alert("Thay đổi quyền thành công");
+                    }
                 },
                 error: function (e) {
                     console.log(e);
